@@ -10,6 +10,46 @@ class Scrabble
       return 0
     end
   end
+  def check_for_two(letter)
+    two = ['D', 'G']
+    if two.include? (letter.upcase)
+      return 2
+    else
+      return 0
+    end
+  end
+  def check_for_three(letter)
+    three = ['B', 'C', 'M', 'P']
+    if three.include? (letter.upcase)
+      return 3
+    else
+      return 0
+    end
+  end
+  def check_for_four(letter)
+    four = ['F', 'H', 'V', 'W', 'Y']
+    if four.include? (letter.upcase)
+      return 4
+    else
+      return 0
+    end
+  end
+  def check_for_five(letter)
+    five = ['K']
+    if five.include? (letter.upcase)
+      return 5
+    else
+      return 0
+    end
+  end
+  def check_for_eight(letter)
+    eight = ['J', 'X']
+    if eight.include? (letter.upcase)
+      return 8
+    else
+      return 0
+    end
+  end
   def score
     if @word == nil
       return 0
