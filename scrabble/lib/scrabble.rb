@@ -1,6 +1,6 @@
 class Scrabble
   def initialize(word)
-    @word = word 
+    @word = word.chomp 
   end
   def score
     if @word == ''
@@ -8,3 +8,5 @@ class Scrabble
     end
   end
 end
+
+puts Scrabble.new(" \t\n")
