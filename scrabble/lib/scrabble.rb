@@ -1,12 +1,14 @@
 class Scrabble
   def initialize(word)
-    @word = word.chomp 
+    @word = word 
   end
   def score
-    if @word == ''
+    if @word == nil
+      return 0
+    elsif @word.rstrip == ''
       return 0
     end
   end
 end
 
-puts Scrabble.new(" \t\n")
+puts Scrabble.new(nil).score
